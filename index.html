@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veritas - About Us</title>
     <style>
+        /* Base Styles */
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -40,7 +42,6 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
         }
-
         /* Black and Neon Purple Button */
         .join-btn {
             padding: 1.3em 3em;
@@ -53,23 +54,59 @@
             border: 2px solid #CC00FF; /* Neon purple border */
             border-radius: 45px;
             box-shadow: 0px 8px 15px rgba(204, 0, 255, 0.3);
-            transition: all 0.3s ease 0s;
+            transition: all 0.3s ease;
             cursor: pointer;
             outline: none;
             display: inline-block;
             margin-top: 20px;
             text-decoration: none;
         }
-
         .join-btn:hover {
             background-color: #CC00FF; /* Neon purple background on hover */
             color: #000; /* Black text on hover */
             box-shadow: 0px 15px 20px rgba(204, 0, 255, 0.5);
             transform: translateY(-7px);
         }
-
         .join-btn:active {
             transform: translateY(-1px);
+        }
+        /* Responsive Design for Tablets and Phones */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px 20px;
+            }
+            .logo {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            .social-links a {
+                margin: 0 5px;
+            }
+            .content {
+                margin: 20px;
+                padding: 15px;
+            }
+            .join-btn {
+                padding: 1em 2em;
+                font-size: 10px;
+            }
+        }
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 18px;
+            }
+            .content {
+                margin: 10px;
+                padding: 10px;
+            }
+            .join-btn {
+                padding: 0.8em 1.5em;
+                font-size: 9px;
+            }
+            .social-links img {
+                height: 24px;
+            }
         }
     </style>
 </head>
